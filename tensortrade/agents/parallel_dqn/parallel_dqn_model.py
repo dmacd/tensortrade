@@ -17,12 +17,12 @@ import random
 import numpy as np
 import tensorflow as tf
 
-from tensortrade.environments import TradingEnvironment
+from tensortrade.env.generic import TradingEnv
 
 class ParallelDQNModel:
 
     def __init__(self,
-                 env: TradingEnvironment,
+                 env: TradingEnv,
                  policy_network: str = None):
 
         self.n_actions = env.action_space.n

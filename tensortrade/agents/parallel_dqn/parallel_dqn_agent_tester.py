@@ -22,13 +22,14 @@ import numpy as np
 from collections import namedtuple
 
 from tensortrade.agents.parallel_dqn.parallel_dqn_model import ParallelDQNModel
+from tensortrade.env.generic import TradingEnv
 
 DQNTransition = namedtuple('DQNTransition', ['state', 'action', 'reward', 'next_state', 'done'])
 
 class ParallelDQNAgentTester:
 
     def __init__(self,
-                 env: 'TradingEnvironment',
+                 env: TradingEnv,
                  model: ParallelDQNModel):
 
         self.env = env

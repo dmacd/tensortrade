@@ -18,12 +18,13 @@ import numpy as np
 import tensorflow as tf
 
 from tensortrade.agents import ReplayMemory, DQNTransition
+from tensortrade.agents.parallel_dqn.parallel_dqn_model import ParallelDQNModel
 
 
 class ParallelDQNOptimizer:
     def __init__(self,
                  create_env_func,
-                 model: 'ParallelDQNModel',
+                 model: ParallelDQNModel,
                  n_envs: int,
                  n_steps: int,
                  n_episodes: int,
